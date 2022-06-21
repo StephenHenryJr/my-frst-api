@@ -20,9 +20,25 @@ const tea = {
         'caffinated': false,
         'flavor': "spicy"
     },
+    'chai': {
+        'type': 'herbal',
+        'origin': 'India',
+        'waterTemp': 170,
+        'steepTimeInSeconds': 200,
+        'caffinated': false,
+        'flavor': "milky smooth"
+    },
+    'earl grey': {
+        'type': 'herbal',
+        'origin': 'England',
+        'waterTemp': 300,
+        'steepTimeInSeconds': 400,
+        'caffinated': true,
+        'flavor': "extra buttery"
+    },
     'unknown': {
         'type': 'unknown',
-        'origin': 'Cunknown',
+        'origin': 'unknown',
         'waterTemp': 0,
         'steepTimeInSeconds': 0,
         'caffinated': 'unknown',

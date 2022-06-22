@@ -52,6 +52,7 @@ app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
 })
 
+// The colon in front of name lets express know it's a query parameter on the URL
 app.get('/api/:name', (request, response) => {
     const teaName = request.params.name.toLowerCase()
     if( tea[teaName] ) {

@@ -52,15 +52,24 @@ app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
 })
 
+// If you want to return the entire Tea object
+// app.get('/tea', (request, response) => {
+//     response.send(tea)
+// })
+
 // The colon in front of name lets express know it's a query parameter on the URL
+// Also .name we are extracting the parameter since name is what we used as part 
+// of the route path, it could literally be anything but this applies in this case
 app.get('/api/:name', (request, response) => {
-    const teaName = request.params.name.toLowerCase()
+    const teaName = request.params.name.toLowerCase(); 
+    console.log(request.params)
     if( tea[teaName] ) {
-        response.json(tea[teaName])
+        response.send(tea[teaName])
     }else {
-        response.json(tea['unknown'])
+        // response.send(tea['unknown'])
+        response.status(404).send('Tea not found, please try again...')
     }
-    response.json(tea[teaName])
+    // response.send(tea[teaName])
 })
 
 // Server listens for PORT. Instead of hard coding it we leave it open. 

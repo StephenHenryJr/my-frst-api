@@ -9,7 +9,7 @@ const tea = {
         'origin': 'China',
         'waterTemp': 200,
         'steepTimeInSeconds': 180,
-        'caffinated': true,
+        'caffeinated': true,
         'flavor': "matcha"
     },
     'ginger': {
@@ -25,7 +25,7 @@ const tea = {
         'origin': 'India',
         'waterTemp': 170,
         'steepTimeInSeconds': 200,
-        'caffinated': false,
+        'caffeinated': false,
         'flavor': "milky smooth"
     },
     'earl grey': {
@@ -33,7 +33,7 @@ const tea = {
         'origin': 'England',
         'waterTemp': 300,
         'steepTimeInSeconds': 400,
-        'caffinated': true,
+        'caffeinated': true,
         'flavor': "extra buttery"
     },
     'unknown': {
@@ -41,7 +41,7 @@ const tea = {
         'origin': 'unknown',
         'waterTemp': 0,
         'steepTimeInSeconds': 0,
-        'caffinated': 'unknown',
+        'caffeinated': 'unknown',
         'flavor': 'unknown',
     },
 

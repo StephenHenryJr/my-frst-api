@@ -1,7 +1,7 @@
 const express = require('express')
 // This allows us to fire off express and have all it's dependencies ready and captures this in a variable
 const app = express(); 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 const tea = {
     'green': {
@@ -17,7 +17,7 @@ const tea = {
         'origin': 'Jamaica',
         'waterTemp': 150,
         'steepTimeInSeconds': 220,
-        'caffinated': false,
+        'caffeinated': false,
         'flavor': "spicy"
     },
     'chai': {
@@ -69,6 +69,6 @@ app.get('/api/:name', (request, response) => {
 
 // Server listens for PORT. Instead of hard coding it we leave it open. 
 // We check if Heroku is serving up the port and if not we use our own port. 
-app.listen(process.env.PORT || PORT, () => {
+app.listen(PORT, () => {
     console.log(`The server is running on port ${PORT}! Better go catch it!`)
 })

@@ -1,7 +1,10 @@
 const express = require('express')
+const cors = require('cors')
 // This allows us to fire off express and have all it's dependencies ready and captures this in a variable
 const app = express(); 
 const PORT = process.env.PORT || 8000;
+
+app.use(cors())
 
 const tea = {
     'green': {
